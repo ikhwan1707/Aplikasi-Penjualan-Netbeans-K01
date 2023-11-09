@@ -19,7 +19,7 @@ public class koneksi {
         if (koneksi == null)
         {
         try {
-            String url = "jdbc:mysql://localhost:3306/db_netbeans";
+            String url = "jdbc:mysql://localhost:3306/db_penjualan_barang_pas_xiia?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC";
             String user = "root";
             String password = "";
             DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
