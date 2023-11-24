@@ -142,6 +142,11 @@ public class form_laporan extends javax.swing.JFrame {
         btnclose.setBackground(new java.awt.Color(255, 0, 51));
         btnclose.setForeground(new java.awt.Color(255, 255, 255));
         btnclose.setText("Close");
+        btnclose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncloseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -240,6 +245,11 @@ public class form_laporan extends javax.swing.JFrame {
 }
 
     }//GEN-LAST:event_btncetakActionPerformed
+
+    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btncloseActionPerformed
 
     /**
      * @param args the command line arguments
