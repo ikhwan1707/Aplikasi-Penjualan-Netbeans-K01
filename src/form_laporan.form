@@ -110,16 +110,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cetak Report Penjualan"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportpActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="reportbm">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cetak Report Barang Masuk"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportbmActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="reportb">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cetak Report Barang"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportbActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -172,6 +181,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cetak"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btncetakActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

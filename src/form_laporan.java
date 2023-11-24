@@ -1,3 +1,18 @@
+import java.sql.Connection;
+import java.io.File;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JREmptyDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -41,10 +56,25 @@ public class form_laporan extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Cetak Laporan Keseluruhan"));
 
         reportp.setText("Cetak Report Penjualan");
+        reportp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportpActionPerformed(evt);
+            }
+        });
 
         reportbm.setText("Cetak Report Barang Masuk");
+        reportbm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportbmActionPerformed(evt);
+            }
+        });
 
         reportb.setText("Cetak Report Barang");
+        reportb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportbActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -75,6 +105,11 @@ public class form_laporan extends javax.swing.JFrame {
         jLabel1.setText("No. Faktur");
 
         btncetak.setText("Cetak");
+        btncetak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncetakActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -142,6 +177,65 @@ public class form_laporan extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void reportbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportbActionPerformed
+        // TODO add your handling code here:
+         try {
+            File namafile = new File("src/Laporan/reportBarang.jasper");
+            JasperPrint jp = JasperFillManager.fillReport(namafile.getPath(), null, koneksi.getKoneksi());
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_reportbActionPerformed
+
+    private void reportbmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportbmActionPerformed
+        // TODO add your handling code here:
+        try {
+            File namafile = new File("src/Laporan/reportBarangMasuk.jasper");
+            JasperPrint jp = JasperFillManager.fillReport(namafile.getPath(), null, koneksi.getKoneksi());
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_reportbmActionPerformed
+
+    private void reportpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportpActionPerformed
+        // TODO add your handling code here:
+        try {
+            File namafile = new File("src/Laporan/reportPenjualan.jasper");
+            JasperPrint jp = JasperFillManager.fillReport(namafile.getPath(), null, koneksi.getKoneksi());
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_reportpActionPerformed
+
+    private void btncetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncetakActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+    // Mendapatkan nomor faktur dari komponen input (contoh: JTextField)
+    String nomorFaktur = nofaktur.getText();
+
+    // Mengatur parameter untuk laporan
+    Map<String, Object> parameters = new HashMap<>();
+    parameters.put("faktur", nomorFaktur);
+
+    // Mendapatkan path laporan
+    String reportPath = "src/Laporan/reportCetak.jasper";
+
+    // Mengisi laporan dengan data dan parameter
+    JasperPrint print = JasperFillManager.fillReport(reportPath, parameters, koneksi.getKoneksi());
+
+    // Menampilkan laporan menggunakan JasperViewer
+    JasperViewer.viewReport(print, false);
+} catch (JRException e) {
+    // Mengatasi exception jika terjadi
+    JOptionPane.showMessageDialog(rootPane, e);
+}
+
+    }//GEN-LAST:event_btncetakActionPerformed
 
     /**
      * @param args the command line arguments
