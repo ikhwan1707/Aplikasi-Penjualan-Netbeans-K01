@@ -115,16 +115,6 @@ public class form_petugas_eca extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
-        txtnamapetugas = new javax.swing.JTextField();
-        txtalamat = new javax.swing.JTextField();
-        txtemail = new javax.swing.JTextField();
-        txttelp = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         TablePetugas = new javax.swing.JTable();
         btnadd = new javax.swing.JButton();
@@ -133,50 +123,24 @@ public class form_petugas_eca extends javax.swing.JFrame {
         btndelete = new javax.swing.JButton();
         btncancel = new javax.swing.JButton();
         btnclose = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        txtalamat = new javax.swing.JTextField();
+        txttelp = new javax.swing.JTextField();
+        txtemail = new javax.swing.JTextField();
+        txtnamapetugas = new javax.swing.JTextField();
+        txtid = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(75, 82, 126));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("IDPetugas");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 71, -1));
-
-        jLabel2.setText("Nama Petugas");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 80, -1));
-
-        jLabel3.setText("Alamat Petugas");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 90, -1));
-
-        jLabel4.setText("E-mail");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 50, -1));
-
-        jLabel5.setText("Telepon");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
-
-        txtid.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtidActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 100, -1));
-
-        txtnamapetugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtnamapetugasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtnamapetugas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 380, -1));
-        jPanel1.add(txtalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 380, 110));
-        jPanel1.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 380, -1));
-
-        txttelp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttelpActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txttelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 110, -1));
 
         TablePetugas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -193,7 +157,7 @@ public class form_petugas_eca extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TablePetugas);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 480, 190));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 500, 160));
 
         btnadd.setText("Add New");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +165,7 @@ public class form_petugas_eca extends javax.swing.JFrame {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, -1, -1));
 
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
@@ -209,7 +173,7 @@ public class form_petugas_eca extends javax.swing.JFrame {
                 btnsaveActionPerformed(evt);
             }
         });
-        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 520, -1, -1));
+        jPanel1.add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, -1, -1));
 
         btnupdate.setText("Update");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -217,15 +181,17 @@ public class form_petugas_eca extends javax.swing.JFrame {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, -1, -1));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, -1, -1));
 
+        btndelete.setBackground(new java.awt.Color(255, 0, 51));
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 520, -1, -1));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
 
         btncancel.setText("Cancel");
         btncancel.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +199,7 @@ public class form_petugas_eca extends javax.swing.JFrame {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, -1, -1));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 570, -1, -1));
 
         btnclose.setText("Close");
         btnclose.addActionListener(new java.awt.event.ActionListener() {
@@ -241,9 +207,68 @@ public class form_petugas_eca extends javax.swing.JFrame {
                 btncloseActionPerformed(evt);
             }
         });
-        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, -1, -1));
+        jPanel1.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 570, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 570));
+        jLabel6.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Entri Data Petugas");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 190, -1));
+
+        jPanel2.setBackground(new java.awt.Color(229, 195, 166));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtalamat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtalamatActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 240, 110));
+
+        txttelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttelpActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txttelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 240, -1));
+        jPanel2.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 240, -1));
+
+        txtnamapetugas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnamapetugasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtnamapetugas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 240, -1));
+
+        txtid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 100, -1));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Nama Petugas");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 100, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel1.setText("IDPetugas");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 71, -1));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setText("Alamat Petugas");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 110, -1));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setText("E-mail");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 50, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setText("Telepon");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 400, 290));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -405,6 +430,10 @@ if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || email.isEmpty() || tel
         txttelp.setText(telepon);
     }//GEN-LAST:event_TablePetugasMouseClicked
 
+    private void txtalamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtalamatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtalamatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -453,7 +482,9 @@ if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || email.isEmpty() || tel
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtalamat;
     private javax.swing.JTextField txtemail;

@@ -117,64 +117,83 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnadd = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        txtid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        txtnamadistributor = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
-        txtnamadistributor = new javax.swing.JTextField();
-        txtalamat = new javax.swing.JTextField();
         txtkota = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
         txttelp = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtalamat = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
         TableDistributor = new javax.swing.JTable();
-        btnadd = new javax.swing.JButton();
         btnsave = new javax.swing.JButton();
         btnupdate = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
-        btncancel = new javax.swing.JButton();
         btnclose = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btncancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setText("Entri Data Distributor Barang");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 280, 20));
+        jPanel1.setBackground(new java.awt.Color(75, 82, 126));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setForeground(new java.awt.Color(102, 102, 255));
 
-        jLabel2.setText("ID Distributor");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
-
-        jLabel3.setText("Nama Distributor");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-
-        jLabel4.setText("Alamat Distributor");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
-
-        jLabel5.setText("Kota Asal");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
-
-        jLabel6.setText("E-mail");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, -1, -1));
-
-        jLabel7.setText("Telepon");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
-        getContentPane().add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 80, -1));
-        getContentPane().add(txtnamadistributor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 410, -1));
-
-        txtalamat.addActionListener(new java.awt.event.ActionListener() {
+        btnadd.setText("Add New");
+        btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtalamatActionPerformed(evt);
+                btnaddActionPerformed(evt);
             }
         });
-        getContentPane().add(txtalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 410, 120));
-        getContentPane().add(txtkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 410, -1));
-        getContentPane().add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 410, -1));
-        getContentPane().add(txttelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 410, -1));
+
+        jPanel4.setBackground(new java.awt.Color(229, 195, 166));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.add(txtid, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 20, 82, -1));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("ID Distributor");
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 26, -1, -1));
+        jPanel4.add(txtnamadistributor, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 54, 169, -1));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setText("Nama Distributor");
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 60, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setText("Alamat Distributor");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 100, 110, -1));
+        jPanel4.add(txtkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 170, -1));
+        jPanel4.add(txtemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 170, -1));
+        jPanel4.add(txttelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 170, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setText("Kota Asal");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 188, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel6.setText("E-mail");
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 229, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel7.setText("Telepon");
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 269, -1, -1));
+
+        txtalamat.setColumns(20);
+        txtalamat.setRows(5);
+        jScrollPane2.setViewportView(txtalamat);
+
+        jPanel4.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 94, 170, 70));
 
         TableDistributor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -183,23 +202,12 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TableDistributor);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 560, 180));
-
-        btnadd.setText("Add New");
-        btnadd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, -1, -1));
-
         btnsave.setText("Save");
         btnsave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnsave, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 570, -1, -1));
 
         btnupdate.setText("Update");
         btnupdate.addActionListener(new java.awt.event.ActionListener() {
@@ -207,23 +215,15 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
                 btnupdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 570, -1, -1));
 
+        btndelete.setBackground(new java.awt.Color(255, 0, 51));
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        getContentPane().add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 570, -1, -1));
-
-        btncancel.setText("Cancel");
-        btncancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 570, -1, -1));
 
         btnclose.setText("Close");
         btnclose.addActionListener(new java.awt.event.ActionListener() {
@@ -231,36 +231,107 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
                 btncloseActionPerformed(evt);
             }
         });
-        getContentPane().add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 570, -1, -1));
+
+        jLabel1.setBackground(new java.awt.Color(225, 199, 143));
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Entri Data Distributor Barang");
+
+        btncancel.setText("Cancel");
+        btncancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnupdate)
+                            .addComponent(btnsave)
+                            .addComponent(btndelete)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(btnadd)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btncancel)
+                            .addGap(26, 26, 26)
+                            .addComponent(btnclose))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(btnsave)
+                        .addGap(12, 12, 12)
+                        .addComponent(btnupdate)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btndelete))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnclose)
+                    .addComponent(btncancel)
+                    .addComponent(btnadd))
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtalamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtalamatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtalamatActionPerformed
+    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
+        kosong();
+    }//GEN-LAST:event_btncancelActionPerformed
+
+    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btncloseActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         int i = TableDistributor.getSelectedRow();
-        
+
         if(i == -1){
             //tidak ada baris tewrseleksi
             JOptionPane.showMessageDialog(this, "Harap Pilih Data Terlebih Dahulu", "ERROR", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+
         String id = (String) model.getValueAt(i, 0);
-        
+
         try{
             Connection c = koneksi.getKoneksi();
-            
+
             String sql = "DELETE FROM tbldistributor WHERE IDDistributor = ?";
-            
+
             PreparedStatement p = c.prepareStatement(sql);
             p.setString(1, id);
             p.executeUpdate();
             p.close();
-            
+
             JOptionPane.showMessageDialog(null, "Hapus Data Berhasil");
         }catch (SQLException e){
             JOptionPane.showMessageDialog(null, "Terjadi ERROR");
@@ -270,14 +341,47 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btndeleteActionPerformed
 
-    private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
-        kosong();
-    }//GEN-LAST:event_btncancelActionPerformed
+    private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
+        int i = TableDistributor.getSelectedRow();
 
-    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
-        setEnabletrue();
-        btnadd.setEnabled(true);
-    }//GEN-LAST:event_btnaddActionPerformed
+        if(i == -1){
+            //tidak ada baris tewrseleksi
+            JOptionPane.showMessageDialog(this, "harap pilih data terlebih dahulu", "error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String id = (String) model.getValueAt(i, 0);
+        String nama = txtnamadistributor.getText();
+        String alamat = txtalamat.getText();
+        String kota = txtkota.getText();
+        String email = txtemail.getText();
+        String telpon = txttelp.getText();
+
+        try {
+            Connection c = koneksi.getKoneksi();
+
+            String sql = "UPDATE tbldistributor SET NamaDistributor = ?, Alamat = ?, KotaAsal = ?, Email = ?, Telpon = ? WHERE IDDistributor = ?"; // Pastikan nama tabel dan kolom yang benar
+
+            PreparedStatement p = c.prepareStatement(sql);
+
+            p.setString(1, nama);
+            p.setString(2, alamat);
+            p.setString(3, kota);
+            p.setString(4, email);
+            p.setString(5, telpon);
+            p.setString(6, id);
+
+            p.executeUpdate();
+            p.close();
+
+            JOptionPane.showMessageDialog(null, "Ubah Data Berhasil");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi ERROR: " + e.getMessage());
+        } finally {
+            loaddata();
+            kosong();
+        }
+    }//GEN-LAST:event_btnupdateActionPerformed
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
         String id = txtid.getText();
@@ -287,92 +391,50 @@ public class form_distributorbarang_eca extends javax.swing.JFrame {
         String email = txtemail.getText();
         String telpon = txttelp.getText();
 
-// Memeriksa apakah ada field yang kosong
-if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || kota.isEmpty() || email.isEmpty() || telpon.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Harap Lengkapi Data", "error", JOptionPane.WARNING_MESSAGE);
-} else {
-    Connection c = null;
-    PreparedStatement p = null;
-    try {
-        c = koneksi.getKoneksi();
-        String sql = "INSERT INTO tbldistributor (IDDistributor, NamaDistributor, Alamat, KotaAsal, Email, Telpon) VALUES (?, ?, ?, ?, ?, ?)";
-        p = c.prepareStatement(sql);
-
-        p.setString(1, id);
-        p.setString(2, nama);
-        p.setString(3, alamat);
-        p.setString(4, kota);
-        p.setString(5, email);
-        p.setString(6, telpon);
-
-        // Menjalankan query untuk menyimpan data
-        int rowsAffected = p.executeUpdate();
-        if (rowsAffected > 0) {
-            JOptionPane.showMessageDialog(null, "Penyimpanan data berhasil");
+        // Memeriksa apakah ada field yang kosong
+        if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || kota.isEmpty() || email.isEmpty() || telpon.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Harap Lengkapi Data", "error", JOptionPane.WARNING_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(null, "Gagal menyimpan data");
+            Connection c = null;
+            PreparedStatement p = null;
+            try {
+                c = koneksi.getKoneksi();
+                String sql = "INSERT INTO tbldistributor (IDDistributor, NamaDistributor, Alamat, KotaAsal, Email, Telpon) VALUES (?, ?, ?, ?, ?, ?)";
+                p = c.prepareStatement(sql);
+
+                p.setString(1, id);
+                p.setString(2, nama);
+                p.setString(3, alamat);
+                p.setString(4, kota);
+                p.setString(5, email);
+                p.setString(6, telpon);
+
+                // Menjalankan query untuk menyimpan data
+                int rowsAffected = p.executeUpdate();
+                if (rowsAffected > 0) {
+                    JOptionPane.showMessageDialog(null, "Penyimpanan data berhasil");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Gagal menyimpan data");
+                }
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
+            } finally {
+                loaddata();
+                kosong();
+                setEnabletrue();
+                btnadd.setEnabled(true);
+            }
         }
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Error: " + e.getMessage());
-    } finally {
-        loaddata();
-        kosong();
-        setEnabletrue();
-        btnadd.setEnabled(true);
-    }
-}   
     }//GEN-LAST:event_btnsaveActionPerformed
-
-    private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
-        int i = TableDistributor.getSelectedRow();
-        
-        if(i == -1){
-            //tidak ada baris tewrseleksi
-            JOptionPane.showMessageDialog(this, "harap pilih data terlebih dahulu", "error", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        
-        String id = (String) model.getValueAt(i, 0);
-        String nama = txtnamadistributor.getText();
-        String alamat = txtalamat.getText();
-        String kota = txtkota.getText();
-        String email = txtemail.getText();
-        String telpon = txttelp.getText();
-        
-        try {
-        Connection c = koneksi.getKoneksi();
-
-        String sql = "UPDATE tbldistributor SET NamaDistributor = ?, Alamat = ?, KotaAsal = ?, Email = ?, Telpon = ? WHERE IDDistributor = ?"; // Pastikan nama tabel dan kolom yang benar
-
-        PreparedStatement p = c.prepareStatement(sql);
-
-        p.setString(1, nama);
-        p.setString(2, alamat);
-        p.setString(3, kota);
-        p.setString(4, email);
-        p.setString(5, telpon);
-        p.setString(6, id);
-
-        p.executeUpdate();
-        p.close();
-
-        JOptionPane.showMessageDialog(null, "Ubah Data Berhasil");
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Terjadi ERROR: " + e.getMessage());
-    } finally {
-        loaddata();
-        kosong();
-    }
-    }//GEN-LAST:event_btnupdateActionPerformed
 
     private void TableDistributorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TableDistributorMouseClicked
         int baris = TableDistributor.getSelectedRow();
-        
+
         if (baris == -1){
             //tak ada baris terseleksi
             return;
         }
-        
+
         String id = TableDistributor.getValueAt(baris, 0).toString();
         txtid.setText(id);
         String nama = TableDistributor.getValueAt(baris, 1).toString();
@@ -385,12 +447,13 @@ if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || kota.isEmpty() || emai
         txtemail.setText(email);
         String telepon = TableDistributor.getValueAt(baris, 5).toString();
         txttelp.setText(telepon);
-    
+
     }//GEN-LAST:event_TableDistributorMouseClicked
 
-    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
-         this.dispose();
-    }//GEN-LAST:event_btncloseActionPerformed
+    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
+        setEnabletrue();
+        btnadd.setEnabled(true);
+    }//GEN-LAST:event_btnaddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -442,8 +505,11 @@ if (id.isEmpty() || nama.isEmpty() || alamat.isEmpty() || kota.isEmpty() || emai
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtalamat;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea txtalamat;
     private javax.swing.JTextField txtemail;
     private javax.swing.JTextField txtid;
     private javax.swing.JTextField txtkota;
