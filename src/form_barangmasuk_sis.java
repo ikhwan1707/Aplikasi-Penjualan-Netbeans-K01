@@ -116,7 +116,6 @@ public class form_barangmasuk_sis extends javax.swing.JFrame {
         txttotal.setEnabled(false);
         additem.setEnabled(false);
         btnsave.setEnabled(false);
-        btnclose.setEnabled(false);
     }
     
     public void setEnabletrue(){
@@ -439,7 +438,7 @@ public class form_barangmasuk_sis extends javax.swing.JFrame {
         });
         jPanel1.add(txttotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 870, 105, -1));
 
-        txttglmasuk.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/M/yy"))));
+        txttglmasuk.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
         jPanel1.add(txttglmasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 298, -1));
         jPanel1.add(txtnota, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 300, -1));
 
@@ -563,10 +562,7 @@ public class form_barangmasuk_sis extends javax.swing.JFrame {
 
     private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
         // TODO add your handling code here:
-        if(JOptionPane.showConfirmDialog(null,"Aplikasi ini akan ditutup \\n jika Anda menekan tombol OK",
-            "Information",JOptionPane.OK_CANCEL_OPTION,
-            JOptionPane.INFORMATION_MESSAGE)==JOptionPane.OK_OPTION)
-    this.dispose();
+        this.dispose();
     }//GEN-LAST:event_btncloseActionPerformed
 
     private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
