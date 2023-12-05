@@ -552,7 +552,9 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 812, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -642,20 +644,27 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         btntambah.setEnabled(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
- private void totalbayar(){
-        int jumlahBaris = tb_dtbrg.getRowCount();
-        double totalBiaya = 0;
-        int jumlahBarang;
-        double hargaBrang;
-        
-        for(int i = 0; i<jumlahBaris; i++){
+private void totalbayar() {
+    int jumlahBaris = tb_dtbrg.getRowCount();
+    int totalBiaya = 0;
+    int jumlahBarang;
+    int hargaBrang;
+
+    for (int i = 0; i < jumlahBaris; i++) {
+        try {
             jumlahBarang = Integer.parseInt(tb_dtbrg.getValueAt(i, 4).toString());
-            hargaBrang = Double.parseDouble(tb_dtbrg.getValueAt(i, 2).toString());
-            totalBiaya = totalBiaya+ (jumlahBarang*hargaBrang);
+            hargaBrang = Integer.parseInt(tb_dtbrg.getValueAt(i, 2).toString());
+            totalBiaya = totalBiaya + (jumlahBarang * hargaBrang);
+        } catch (NumberFormatException | NullPointerException e) {
+            // Handle the exception, for example, print an error message
+            System.err.println("Error parsing values at row " + i);
+            // You might want to log the exception or show a user-friendly message
         }
-        
-        txttotal.setText(String.format("%.2f", totalBiaya));
     }
+
+    jTextField1.setText(String.valueOf(totalBiaya));
+}
+
      
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
         String NM=txtnofak.getText();
