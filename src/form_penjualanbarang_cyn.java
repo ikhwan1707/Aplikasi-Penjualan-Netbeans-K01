@@ -142,16 +142,6 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         }
     }
    
-    private void totalbayar(){
-        int a;
-        int b = 0;
-        double c;
-        
-        a = Integer.parseInt(txthrg.getText().toString());
-        b = Integer.parseInt(txtjmlh.getText().toString());
-        c = a * b;
-        jTextField1.setText(String.valueOf(c));
-    }
     private void loadData() {
     model = new DefaultTableModel();
     model.getDataVector().removeAllElements();
@@ -241,6 +231,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         txtptgs = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txttgl = new javax.swing.JTextField();
+        btncari = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -252,8 +243,11 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(75, 82, 126));
-        setMaximumSize(new java.awt.Dimension(875, 2147483647));
-        setMinimumSize(new java.awt.Dimension(811, 875));
+        setMaximumSize(null);
+        setMinimumSize(null);
+
+        jScrollPane1.setMaximumSize(null);
+        jScrollPane1.setMinimumSize(null);
 
         jPanel1.setBackground(new java.awt.Color(75, 82, 126));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -415,6 +409,18 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
             }
         });
 
+        btncari.setText("Cari Data");
+        btncari.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncariActionPerformed(evt);
+            }
+        });
+        btncari.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                btncariKeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -426,7 +432,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cmbptgs, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(txtptgs, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -434,6 +440,8 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtnofak, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btncari)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -443,12 +451,13 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txttgl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel1)
-                    .addComponent(txtnofak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnofak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btncari))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtptgs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -521,7 +530,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtsisa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 710, 310, 110));
@@ -543,7 +552,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -633,12 +642,27 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         btntambah.setEnabled(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+ private void totalbayar(){
+        int jumlahBaris = tb_dtbrg.getRowCount();
+        double totalBiaya = 0;
+        int jumlahBarang;
+        double hargaBrang;
+        
+        for(int i = 0; i<jumlahBaris; i++){
+            jumlahBarang = Integer.parseInt(tb_dtbrg.getValueAt(i, 4).toString());
+            hargaBrang = Double.parseDouble(tb_dtbrg.getValueAt(i, 2).toString());
+            totalBiaya = totalBiaya+ (jumlahBarang*hargaBrang);
+        }
+        
+        txttotal.setText(String.format("%.2f", totalBiaya));
+    }
+     
     private void btntambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntambahActionPerformed
         String NM=txtnofak.getText();
         String KB=cmbkd.getSelectedItem().toString();
         String JM=txtjmlh.getText();
 
-        totalbayar();
+//        totalbayar();
         if ((NM.isEmpty()) | (KB.isEmpty()) |(JM.isEmpty())) {
             JOptionPane.showMessageDialog(null,"data tidak boleh kosong, silahkan dilengkapi");
         }else {
@@ -672,7 +696,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
 
                 stt.close();
                 cmbkd.requestFocus();
-                btntambah.setEnabled(false);
+//                btntambah.setEnabled(false);
                 btnsave.setEnabled(true);
                 bersih();
                 cmbkd.requestFocus();
@@ -739,6 +763,41 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtnofakActionPerformed
 
+    private void btncariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncariActionPerformed
+        try {
+        model.setRowCount(0); // Mengosongkan tabel
+
+        Connection konek = koneksi.getKoneksi(); // Mendapatkan koneksi database
+
+        Statement stat = konek.createStatement();
+        String sql = "SELECT tbldetailpenjualan.NoFaktur, tbldetailpenjualan.KodeBarang, tbldetailpenjualan.Jumlah, tbldetailpenjualan.SubTotal, " +
+                "tblbarang.NamaBarang, tblbarang.HargaJual, tblbarang.Stok " +
+                "FROM tbldetailpenjualan " +
+                "INNER JOIN tblbarang ON tbldetailpenjualan.KodeBarang = tblbarang.KodeBarang " +
+                "WHERE tbldetailpenjualan.NoFaktur = '" + txtnofak.getText() + "'";
+        ResultSet res = stat.executeQuery(sql);
+
+        while (res.next()) {
+            String noFaktur = res.getString("NoFaktur");
+            String kodeBarang = res.getString("KodeBarang");
+            String jumlah = res.getString("Jumlah");
+            String subTotal = res.getString("SubTotal");
+            String namaBarang = res.getString("NamaBarang");
+            String hargaJual = res.getString("HargaJual");
+            String stok = res.getString("Stok");
+
+            String data[] = {noFaktur, kodeBarang, jumlah, subTotal, namaBarang, hargaJual, stok};
+            model.addRow(data);
+        } // Pastikan untuk menutup koneksi setelah digunakan
+    } catch (SQLException e) {
+        e.printStackTrace(); // Tambahkan pemanggilan printStackTrace() untuk debugging
+    }
+    }//GEN-LAST:event_btncariActionPerformed
+
+    private void btncariKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btncariKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncariKeyReleased
+
     private void kosong(){
         txtnofak.setText(null);
         txttgl.setText(null);
@@ -750,6 +809,9 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
         txttotal.setText(null);
         cmbptgs.setSelectedIndex(0);
         cmbkd.setSelectedIndex(0);
+        jTextField1.setText(null);
+        txtbayar.setText(null);
+        txtsisa.setText(null);
         //tb_dtbrg.setRowCount(0);
     }
     
@@ -798,6 +860,7 @@ public class form_penjualanbarang_cyn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btncari;
     private javax.swing.JButton btnsave;
     private javax.swing.JButton btntambah;
     private javax.swing.JComboBox<String> cmbkd;
